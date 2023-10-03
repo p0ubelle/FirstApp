@@ -1,0 +1,40 @@
+
+https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/{sum_name} =
+
+"id":"gQGifgGdowyIn7pEgtbhMbrl1EN-WdsRw0JrCKYG3AdapqxU"
+"accountId":"XgovhN0MdsRBy7TrRw2hQMRNZKYvdeybhHG83imCCmDYZRYtumyjgr6l"
+"puuid":"ViL2pH-uhhbjHIqHp9WdROGOj-9qdEcxgPtaz8p0AR_EdKpEf6vTa0V7gp7tY7QUbsOT7P5mdgIM5Q"
+"name":"Poubelle26"
+"profileIconId":"552"
+"revisionDate":"1646345313000"
+"summonerLevel":"147"
+
+
+
+https://{platform}.api.riotgames.com/lol/league/v4/entries/by-summoner/{encryptedSummonerId}
+
+[{
+  "leagueId":"cb92okpj-feiwo3-442",
+  "queueType":"RANKED_SOLO_5x5",
+  "tier":"BRONZE",
+  "rank":"II",
+  "summonerId":"kjIOiopj24_jinnBzuhbHu8bkov6lBh",
+  "summonerName":"name",
+  "leaguePoints":100,
+  "wins":80,
+  "losses":302,
+  "veteran":false,
+  "inactive":false,
+  "freshBlood":false,
+  "hotStreak":false,
+  "miniSeries": {
+    "target": 3,
+    "wins": 2,
+    "losses": 2,
+    "progress": "LWLWN"
+  }
+}, {
+  ...
+  "queueType":"RANKED_FLEX_SR",
+  ...
+}]

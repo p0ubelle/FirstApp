@@ -1,0 +1,38 @@
+import discord
+import asyncio
+
+# Your Discord bot token
+TOKEN = 'your_bot_token_here'
+
+# ID of the user you want to call
+USER_ID_TO_CALL = 1234567890  # Replace with the actual user ID
+
+# The ID of the voice channel you want the call to take place
+VOICE_CHANNEL_ID = 9876543210  # Replace with the actual voice channel ID
+
+# Create a Discord bot instance
+client = discord.Client()
+
+@client.event
+async def on_ready():
+    print(f'We have logged in as {client.user}')
+
+    # Find the voice channel to initiate the call
+    voice_channel = client.get_channel(VOICE_CHANNEL_ID)
+    if voice_channel:
+        try:
+            # Connect to the voice channel
+            voice_connection = await voice_channel.connect()
+
+            # Wait for a few seconds (optional)
+            await asyncio.sleep(5)
+
+            # Disconnect from the voice channel
+            await voice_connection.disconnect()
+        except discord.errors.HTTPException:
+            print("Failed to connect to the voice channel.")
+    else:
+        print(f"Voice channel with ID {VOICE_CHANNEL_ID} not found.")
+
+# Run the bot with the provided token
+client.run(TOKEN)
